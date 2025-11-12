@@ -36,11 +36,11 @@ def menu(): #메뉴 함수
                 print("돈이 부족합니다. 다시 걸어주세요")
                 continue
             user_rsp = int(input("[-] 아래 선택지 중 선택해주세요.\n0 : 가위\n1 : 바위\n2 : 보\n\n> "))
-            print("[$] 가위!!")
+            print("[$] 가위!!",end="\r")
             time.sleep(1)
-            print("[$] 바위!!!!!")
+            print("[$] 바위!!!!!",end="\r")
             time.sleep(1)
-            print("[$] 보!!!!!!!")
+            print("[$] 보!!!!!!!",end="\r")
             time.sleep(1)
             os.system('cls')
             return bet_coin, user_rsp, menu_num
@@ -77,16 +77,16 @@ def bye(): #파산시 게임 종료
         print("[^_^] 또 찾아와주세요! :)")
         exit()
 
-while True:
-    print("[$] 가위/바위/보 게임 Machine [$]")
-    print("$"+"-+"*12+"$")
+print("[$] 가위/바위/보 게임 Machine [$]")
+print("$"+"-+"*12+"$")
 
-    user_name = input("이름: > ")
-    print("[$] {} 님! 대박나세요!".format(user_name))
-    print("[$] 입장을 도와드리겠습니다. 잠시만 기다려주세요...")
-    time.sleep(3)
-    os.system('cls')
-        
+user_name = input("이름: > ")
+print("[$] {} 님! 대박나세요!".format(user_name))
+print("[$] 입장을 도와드리겠습니다. 잠시만 기다려주세요...")
+time.sleep(3)
+os.system('cls')
+
+while True:    
     print("[User Info]")
     print("-- User Name: {}".format(user_name))
     print("-- User Coin: {}".format(user_coin))
@@ -118,6 +118,6 @@ while True:
         
 
     print("[$] 현재 남은 코인: {}".format(user_coin))
-    print("[$] 계속하려면 Enter를 누르세요.")
+    # print("[$] 계속하려면 Enter를 누르세요.")
 
     bye()
